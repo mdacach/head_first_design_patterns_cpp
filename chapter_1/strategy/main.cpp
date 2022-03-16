@@ -38,7 +38,7 @@ class Squeak : public QuackBehavior
 
 class Silence : public QuackBehavior
 {
-    void quack() const override { std::cout << "Silence\n"; }
+    void quack() const override { std::cout << "<< Silence >>\n"; }
 };
 
 // Superclass for all kinds of Ducks
