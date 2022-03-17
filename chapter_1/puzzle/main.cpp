@@ -7,6 +7,7 @@ class WeaponBehavior
 {
 public:
     virtual void UseWeapon() const = 0;
+    virtual ~WeaponBehavior() = default;
 };
 
 class KnifeBehavior : public WeaponBehavior
@@ -35,6 +36,7 @@ protected:
     std::shared_ptr<WeaponBehavior> weapon_behavior_{};
 
     virtual void ShowInternalDescription() const = 0;
+    virtual ~Character() = default;
 
 public:
     virtual void Fight() const
