@@ -8,6 +8,7 @@ class FlyBehavior
 {
 public:
     virtual void fly() const = 0;
+    virtual ~FlyBehavior() = default;
 };
 
 class NoFly : public FlyBehavior
@@ -24,6 +25,7 @@ class QuackBehavior
 {
 public:
     virtual void quack() const = 0;
+    virtual ~QuackBehavior() = default;
 };
 
 class Quack : public QuackBehavior
@@ -52,6 +54,8 @@ protected:
     std::unique_ptr<QuackBehavior> quack_behavior_{};
 
 public:
+    virtual ~Duck() = default;
+
     virtual void display() const = 0;
 
     void fly() const { fly_behavior_->fly(); }
