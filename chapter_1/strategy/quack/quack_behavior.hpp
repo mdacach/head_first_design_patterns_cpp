@@ -1,0 +1,14 @@
+//
+//
+
+#ifndef HEAD_FIRST_DESIGN_PATTERNS_CHAPTER_1_STRATEGY_QUACK_QUACK_BEHAVIOR_HPP_
+#define HEAD_FIRST_DESIGN_PATTERNS_CHAPTER_1_STRATEGY_QUACK_QUACK_BEHAVIOR_HPP_
+
+class QuackBehavior
+{
+public:
+    virtual void quack() const = 0;
+    virtual ~QuackBehavior() = default;
+};
+
+#endif // HEAD_FIRST_DESIGN_PATTERNS_CHAPTER_1_STRATEGY_QUACK_QUACK_BEHAVIOR_HPP_
