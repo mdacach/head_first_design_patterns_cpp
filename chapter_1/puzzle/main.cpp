@@ -36,9 +36,10 @@ protected:
     std::shared_ptr<WeaponBehavior> weapon_behavior_{};
 
     virtual void ShowInternalDescription() const = 0;
-    virtual ~Character() = default;
 
 public:
+    virtual ~Character() = default;
+
     virtual void Fight() const
     {
         ShowInternalDescription();
