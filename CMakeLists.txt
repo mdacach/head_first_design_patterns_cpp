@@ -19,3 +19,6 @@ add_executable(strategy
 
 add_executable(ch1_puzzle
         chapter_1/puzzle/main.cpp)
+
+add_executable(singleton
+        chapter_5/main.cpp)
