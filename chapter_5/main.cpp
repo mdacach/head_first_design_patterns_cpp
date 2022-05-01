@@ -2,13 +2,22 @@
 // Created by matheus on 01/05/22.
 //
 
+#include <memory>
+
+// Reference: Meyer's Singleton (https://stackoverflow.com/q/1661529)
 class ChocolateBoiler {
 private:
     bool m_empty{};
     bool m_boiled{};
 
-public:
+private:
     ChocolateBoiler() : m_empty{true}, m_boiled{false} {
+    }
+
+public:
+    static auto GetInstance() -> ChocolateBoiler & {
+        static auto instance = ChocolateBoiler{};
+        return instance;
     }
 
     auto Fill() -> void {
@@ -43,7 +52,7 @@ public:
 };
 
 int main() {
-    auto boiler = ChocolateBoiler{};
+    auto boiler = ChocolateBoiler::GetInstance();
     boiler.Fill();
     boiler.Drain();
 }
